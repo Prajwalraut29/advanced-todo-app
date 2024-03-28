@@ -4,7 +4,7 @@ import bcrypt from 'bcrypt'
 import { NextResponse } from "next/server";
 
 Connect()
-export const POST = async (request) => {
+export async function POST(request) {
     const { name, email, password } = await request.json()
     try {
         let User = await user.findOne({ email })

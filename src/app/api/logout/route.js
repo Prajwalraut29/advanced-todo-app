@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export const GET = async (request) => {
+export async function GET(request) {
 
     try {
         let response = NextResponse.json({

@@ -3,7 +3,7 @@ import { todo } from "@/app/backend/models/Todo"
 import { Connect } from "@/app/backend/connection"
 
 Connect()
-export const PUT = async (request, { params }) => {
+export async function PUT(request, { params }) {
     const id = params.id;
     const { title } = await request.body;
     try {

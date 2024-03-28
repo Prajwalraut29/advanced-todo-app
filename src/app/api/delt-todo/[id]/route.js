@@ -3,7 +3,7 @@ import { todo } from "@/app/backend/models/Todo"
 import { Connect } from "@/app/backend/connection"
 
 Connect()
-export const DELETE = async (request, { params }) => {
+export async function DELETE(request, { params }) {
     const id = params.id;
     try {
         let blog = await todo.findByIdAndDelete(id)
@@ -18,3 +18,4 @@ export const DELETE = async (request, { params }) => {
     }
 
 }
+

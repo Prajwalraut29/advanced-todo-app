@@ -4,7 +4,7 @@ import { NextResponse } from "next/server"
 const jwt = require('jsonwebtoken')
 
 Connect()
-export const GET = async (request) => {
+export async function GET(request) {
     try {
         const token = request.cookies.get("token")?.value || "";
         if (!token) {

@@ -4,7 +4,7 @@ import { Connect } from "@/app/backend/connection";
 
 Connect()
 
-export const GET = async () => {
+export async function GET() {
     try {
         const title = await todo.find({})
         if (!title) {

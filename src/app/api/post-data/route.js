@@ -4,7 +4,7 @@ import { Connect } from "@/app/backend/connection";
 
 Connect()
 
-export const POST = async (request) => {
+export async function POST(request) {
     try {
         const { title } = await request.json()
         const list = await todo.create({ title })
